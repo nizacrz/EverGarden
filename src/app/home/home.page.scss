@@ -1,0 +1,35 @@
+.new-bg-color {
+  color: rgb(2, 2, 2);
+}
+
+.new-background-color{
+    --background: #b0db78;
+}
+
+ion-fab-button {
+  height: 60px;
+  width: 70px;
+}
+ 
+.cart-icon {
+  font-size: 50px;
+}
+ 
+.cart-length {
+  color: var(--ion-color-primary);
+  position: absolute;
+  top: 18px;
+  left: 25px;
+  font-weight: 600;
+  font-size: 1em;
+  min-width: 25px;
+  z-index: 10;
+}
+
+ion-app {
+  --ion-background-color: #ffffff;
+}
+
+ion-title {
+  color: white;
+}

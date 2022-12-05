@@ -1,0 +1,40 @@
+ion-title {
+  color: rgb(2, 2, 2);
+}
+
+.new-background-color{
+    --background: #b0db78;
+}
+
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 24px;
+  line-height: 22px;
+}
+
+#container p {
+  font-size: 14px;
+  line-height: 20px;
+
+  color: #000000;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+.ion-text-end{
+    text-align: left;
+    font-size: 14px;
+}
