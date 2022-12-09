@@ -1,5 +1,6 @@
 .new-bg-color {
-  color: rgb(2, 2, 2);
+  color: black;
+  font-weight: bold;
 }
 
 .new-background-color{
@@ -30,6 +31,11 @@ ion-app {
   --ion-background-color: #ffffff;
 }
 
-ion-title {
-  color: white;
+ion-card-title {
+  color: black;
+  font-weight: bold;
 }
+ion-card{
+  background: #f6f6e9;
+}
+

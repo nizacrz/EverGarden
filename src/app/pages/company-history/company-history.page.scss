@@ -7,16 +7,16 @@ ion-title {
 }
 
 ion-content{
---ion-background-color: #eeffee;
+--ion-background-color: #f6f6e9;
 }
 
 #container {
   text-align: center;
-
+  color:rgb(0, 0, 0);
   position: absolute;
   left: 0;
   right: 0;
-  top: 50%;
+  top: 60%;
   transform: translateY(-50%);
 }
 
@@ -25,14 +25,7 @@ ion-content{
   line-height: 22px;
 }
 
-#container p {
-  font-size: 14px;
-  line-height: 20px;
-
-  color: #000000;
-
-  margin: 0;
-}
+ 
 
 #container a {
   text-decoration: none;
