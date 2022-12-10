@@ -40,3 +40,18 @@ ion-content{
 strong {
   color: #0c0c0c;
 }
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  color-scheme: white;
+}
+input[type=textarea]{
+  input[type=text] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    color: #cceecc;
+  }
+}
