@@ -16,13 +16,13 @@ export class CartService {
     { id: 0, name: 'Monstera', price: 666.00, amount: 0, img:'assets//PRODUCTS/Monstera deliciosa.png'},
     { id: 1, name: 'Gardenia', price: 466.00, amount: 0, img:'assets/PRODUCTS/Gardenia.png'},
     { id: 2, name: 'Moonlight', price: 366.80, amount: 0, img:'assets/PRODUCTS/Moonlight Pothos.png' },
-    { id: 3, name: 'Dwarf Starfish', price: 200.26, amount: 0, img:'assets/PRODUCTS/Dwarf Starfish.png' },
+    { id: 3, name: 'Starfish Plant', price: 200.26, amount: 0, img:'assets/PRODUCTS/Dwarf Starfish.png' },
     { id: 4, name: 'Peace Lily', price: 440.00, amount: 0, img:'assets/PRODUCTS/Peace Lily.png' },
     { id: 5, name: 'Rubber Tree', price: 799.99, amount: 0, img:'assets/PRODUCTS/Rubber Tree.png' },
     { id: 6, name: 'Torch Mikado', price: 365.99, amount: 0, img:'assets/PRODUCTS/Torch Mikado.png' },
     { id: 7, name: 'Bromeliad', price: 660.00, amount: 0, img:'assets/PRODUCTS/Bromeliad.png' },
     { id: 8, name: 'Snake Plant', price: 299.00, amount: 0, img:'assets/PRODUCTS/Sansevieria.png' },
-    { id: 9, name: 'Echeveria Lola', price: 459.00, amount: 0, img:'assets/PRODUCTS/Echeveria Lola.png' }
+    { id: 9, name: 'Echeveria', price: 459.00, amount: 0, img:'assets/PRODUCTS/Echeveria Lola.png' }
   ];
 
   private cart = [];
