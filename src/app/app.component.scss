@@ -9,8 +9,14 @@ ion-title {
 .menu-header-bg {
     height: 180px;
     width: 350px;
-    background: #f6f6e9;
+    background: #cceecc;
+    background: linear-gradient(90deg, #cceecc 1%, #9FCDB8 100%);
     margin-bottom: 60px;
+
+    border-radius: 50px 10px 10px 50px;
+    margin-left: -18px;
+    margin-top: 50px;
+
 }
 
 .header-content {
