@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NavController } from '@ionic/angular';
 import { CartService } from '../services/cart.service';
-import { take} from 'rxjs/operators';
+import { take } from 'rxjs/operators';
+
 @Component({
   selector: 'app-item',
   templateUrl: './item.page.html',
@@ -10,7 +11,7 @@ import { take} from 'rxjs/operators';
 })
 export class ItemPage implements OnInit {
 
-    product: any;
+    item: any;
 
   constructor(
     public navCtrl: NavController,
@@ -27,8 +28,8 @@ export class ItemPage implements OnInit {
       }
       const id= paramMap.get('id');
       console.log(id);
-      this.product= this.cartService.getProduct(id);
-      console.log(this.product);
+      this.item= this.cartService.getItem(id);
+      console.log(this.item);
     })
   }
 
