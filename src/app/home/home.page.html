@@ -1,21 +1,12 @@
 <ion-header class="ion-no-border">
   <ion-list lines="none">
-    <ion-toolbar class="new-background-color">
-      <!-- <ion-title class="new-bg-color">
-      Products
-    </ion-title> -->
-      <!-- <ion-buttons slot="start">
-          <ion-menu-button menu="main-menu"></ion-menu-button>
-        </ion-buttons> -->
+    <ion-toolbar color="primary">
       <ion-item color="primary">
         <ion-menu-button menu="start" name="reorder-three"></ion-menu-button>
       </ion-item>
-      <ion-item color="primary">
-        <ion-label>Welcome to <br> Evergarden!</ion-label>
-        <ion-avatar slot="end">
-          <img src="assets/LOGO1.png">
-        </ion-avatar>
-      </ion-item>
+      <div class="title">
+        <h1>Evergarden</h1>
+      </div>
     </ion-toolbar>
   </ion-list>
   <div class="popover">
@@ -24,7 +15,7 @@
 </ion-header>
 
 <ion-content>
-
+ <!--Popular-->
   <ion-grid class="ion-margin-top">
     <ion-item line="none" color="light">
       <ion-label class="title">Popular</ion-label>
@@ -33,25 +24,22 @@
     <ion-row>
       <ion-slides [options]="slideOpts">
         <ion-slide *ngFor="let item of popularItems">
-          <ion-card class="bgCard" [routerLink]="['/', 'cart', 'data', item.id]">
+          <ion-card class="bgCard" [routerLink]="['/', 'cart', 'data',item.id]">
             <ion-card-header>
               <ion-label>{{item?.name}}</ion-label>
             </ion-card-header>
             <ion-card-content>
               <img [src]="item?.img" />
-
             </ion-card-content>
-            <br>
             <div class="price-container">
-              <ion-text>₱: {{item?.price}}</ion-text>
+              <ion-text>₱{{item?.price}}</ion-text>
             </div>
           </ion-card>
-
         </ion-slide>
       </ion-slides>
     </ion-row>
   </ion-grid>
-
+ <!--Features-->
   <ion-grid class="ion-margin-top">
     <ion-item lines="none" color="light">
       <ion-label class="title">Featured Plants</ion-label>
@@ -62,15 +50,12 @@
         <ion-slide *ngFor="let item of featuredItems">
           <ion-card class="featured" [routerLink]="['/item']">
             <ion-card-header>
-              <img [src]="item?.img" />              
+              <img [src]="item?.img" />
             </ion-card-header>
             <ion-card-content>
-              <ion-item lines="none">
-                <ion-label>
-                  {{item?.name}}
-                  <p><ion-text color="tertiary">{{item?.name}}</ion-text></p>
-                </ion-label>
-                <ion-text class="price" slot="end" color="primary"><b>₱ {{item?.price}}</b></ion-text>
+              <ion-item color="primary">
+                <ion-label> {{item?.name}}</ion-label>
+                <ion-text class="price" slot="end"><b>₱{{item?.price}}</b></ion-text>
               </ion-item>
             </ion-card-content>
           </ion-card>
@@ -78,13 +63,6 @@
       </ion-slides>
     </ion-row>
   </ion-grid>
-
-
-
-
-
-
-
 
   <ion-fab vertical="top" horizontal="end" slot="fixed">
     <ion-fab-button (click)="openCart()" #cart>
@@ -103,9 +81,9 @@
       <ion-card-content>
         <ion-row class="ion-align-items-center">
           <ion-col size="8">
-            <ion-label color="secondary">
+            <ion-label color="primary">
 
-              <b>{{ p.price | currency:'PHP ' }}</b>
+              <b style="font-size:larger;">{{ p.price | currency:'₱' }}</b>
             </ion-label>
           </ion-col>
           <ion-col size="4" class="ion-text-right">
