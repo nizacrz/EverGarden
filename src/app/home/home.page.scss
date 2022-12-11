@@ -23,6 +23,38 @@ ion-header{
     margin-top: -30px;
   }
 }
+ion-content{
+  .title{
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--ion-color-dark);
+  }
+  ion-slides{
+    ion-card{
+      height: 30;
+      width: 100%;
+      border-radius: 10px;
+        ion-card header{
+          ion-label, p{
+            font-weight: bold;
+            font-size: 1rem;
+            color: var(--ion-color-dark);
+          }
+        }
+      ion-card-content{
+        img {
+          height: 70px;
+          
+        }
+      }
+      .bgCard{
+        background-position: fixed;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}
 
 
 .new-bg-color {

@@ -34,9 +34,14 @@
       <ion-slide *ngFor ="let item of popularItems">
         <ion-card class="bgCard" [routerLink]="['/', 'cart', 'data', item.id]">
           <ion-card header>
-            <ion-label>{{item?.name}}</ion-label>
+            <ion-label>{{item?.name}}
+              <p>PHP: {{item?.price}}</p>
+            </ion-label>
           </ion-card>
-        </ion-card>"
+          <ion-card-content>
+            <img [src] ="item?.img" />
+          </ion-card-content>
+        </ion-card>
       </ion-slide>
     
     </ion-slides>

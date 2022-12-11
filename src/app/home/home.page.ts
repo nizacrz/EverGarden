@@ -3,7 +3,6 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { CartModalPage } from '../pages/cart-modal/cart-modal.page';
 import { BehaviorSubject } from 'rxjs';
-
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -20,8 +19,6 @@ export class HomePage {
     popularItems: any[] = [];
     featuredItems: any[] = [];
 
-
-
   cart = [];
   products = [];
   cartItemCount: BehaviorSubject<number>;
@@ -34,6 +31,8 @@ export class HomePage {
     this.products = this.cartService.getProducts();
     this.cart = this.cartService.getCart();
     this.cartItemCount = this.cartService.getCartItemCount();
+    this.popularItems = this.cartService.data;
+    this.featuredItems = this.cartService.data;
   }
 
   addToCart(product) {
