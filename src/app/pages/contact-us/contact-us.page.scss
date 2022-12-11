@@ -2,13 +2,14 @@ ion-title {
   color: rgb(0, 0, 0);
 }
 
-.new-background-color{
+.new-background-color {
   --background: #cceecc;
 }
 
-ion-content{
---ion-background-color: #eeffee;
+ion-content {
+  --ion-background-color: #eeffee;
 }
+
 #container {
   text-align: center;
 
@@ -37,21 +38,42 @@ ion-content{
   text-decoration: none;
 }
 
+h1 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 strong {
   color: #0c0c0c;
 }
 
-input[type=text] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  color-scheme: white;
+ion-card-title {
+  p {
+    font-size: 12px;
+    margin: -9px 2px;
+    padding-bottom: 10px;
+  }
 }
-input[type=textarea]{
-  input[type=text] {
-    padding: 12px 20px;
-    margin: 8px 0;
-    color: #cceecc;
+
+ion-card-content {
+  form {
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      padding-bottom: 10px;
+      background-color: white;
+      border-style: 1px solid black;
+
+    }
+  }
+}
+
+ion-card-content {
+  form {
+    textarea {
+      color: gray;
+      border-style: 1px solid black;
+      background-color: white;
+      width: 100%;
+    }
   }
 }
