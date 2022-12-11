@@ -6,14 +6,13 @@ ion-title {
     color: rgb(0, 0, 0);
 }
 
-.menu-header-bg {
-    height: 185px;
-    width: auto;
+ion-footer {
+    padding-left: 10px;
+    font-family: sans-serif;
+    font-size: 12px;
     background: #cceecc;
-    background: linear-gradient(90deg, #cceecc 1%, #9FCDB8 100%);
-    border-radius: 0 0 30px 30px;
-    padding-bottom: 7vh;
-
+    color: #5f7a61;
+    background: linear-gradient(90deg, #cceecc 5%, #9FCDB8 100%);
 }
 
 .header-content {
@@ -90,7 +89,6 @@ ion-content {
                 height: 100% !important;
                 max-width: 100px !important; //any size
                 max-height: 100px !important; //any size 
-
 
             }
         }
