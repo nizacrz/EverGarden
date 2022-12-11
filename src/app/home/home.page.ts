@@ -1,5 +1,5 @@
 import { CartService } from './../services/cart.service';
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { CartModalPage } from '../pages/cart-modal/cart-modal.page';
 import { BehaviorSubject } from 'rxjs';
@@ -8,7 +8,7 @@ import { BehaviorSubject } from 'rxjs';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss']
 })
-export class HomePage {
+export class HomePage implements OnInit{
 
     slideOpts = {
       slidesPerView: 2.2,
@@ -25,7 +25,7 @@ export class HomePage {
 
   @ViewChild('cart', { static: false, read: ElementRef }) fab: ElementRef;
 
-  constructor(private cartService: CartService, private modalCtrl: ModalController) { }
+  constructor(public cartService: CartService, private modalCtrl: ModalController) { }
 
   ngOnInit() {
     this.products = this.cartService.getProducts();

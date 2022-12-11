@@ -19,18 +19,17 @@ ion-header {
       }
     }
   }
-}
 
 .popover {
-  margin: 0 8px;
-
-  ion-searchbar {
-    --border-radius: 20px;
-    margin-top: -30px;
+      margin: 0 8px;
+      ion-searchbar {
+        --border-radius: 20px;
+          margin-top: -30px;
+    }
   }
 }
-
 ion-content {
+  --background: var(--ion-color-light);
   .title {
     font-weight: bold;
     font-size: 1.2rem;
@@ -43,7 +42,7 @@ ion-content {
       width: 100%;
       border-radius: 10px;
 
-      ion-card header {
+      ion-card-header {
 
         ion-label,
         p {
@@ -58,25 +57,30 @@ ion-content {
           height: 70px;
         }
       }
+    }
 
       .bgCard {
         background-position: fixed;
         background-repeat: no-repeat;
         background-size: contain;
       }
-      .fItem{
-        height: 2opx;
-        ion-card-header{
-          padding: 0;
-          background: var(--ion-color-tertiary);
-          img{
-            height: 30px;
-          }
-        }
+      .featured {
+        height: 40vh;
+        ion-card-header {
+            padding: 0;
+            background: #f6f6e9;
+            img {
+                height: 30vh; 
+            }
+        }     
+    }
+    .price {
+        
+        margin-top: 4px;
       }
     }
   }
-}
+
 
 
 .new-bg-color {
