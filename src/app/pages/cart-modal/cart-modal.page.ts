@@ -41,8 +41,8 @@ export class CartModalPage implements OnInit {
     // Perfom PayPal or Stripe checkout process
 
     let alert = await this.alertCtrl.create({
-      header: 'Thanks for your Order!',
-      message: 'We will deliver your products as soon as possible',
+      header: 'Thank you for your Ordering!',
+      message: 'We will deliver your order as soon as possible.',
       buttons: ['OK']
     });
     alert.present().then(() => {

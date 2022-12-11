@@ -1,16 +1,24 @@
 ion-card {
   ion-grid {
     ion-row {
-      ion-thumbnail {
-        min-width: 5rem;
-        min-height: 5rem;
+      ion-col {
 
-        img {
-          padding-right: 10px;
-          max-width: 5rem;
-          min-width: 5rem;
+        h4 {
+          color: #5f7a61;
+          font-weight: bolder;
         }
 
+        ion-thumbnail {
+          min-width: 5rem;
+          min-height: 5rem;
+
+          img {
+            padding-right: 10px;
+            max-width: 5rem;
+            min-width: 5rem;
+          }
+
+        }
       }
 
     }
