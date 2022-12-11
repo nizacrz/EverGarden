@@ -9,6 +9,7 @@ ion-header{
         font-weight: bold;
         font-size: 1.2rem;
         letter-spacing: 0.5px;
+       
       }
       ion-avatar{
         background: white;
@@ -31,7 +32,7 @@ ion-content{
   }
   ion-slides{
     ion-card{
-      height: 30;
+      height: 25vh;
       width: 100%;
       border-radius: 10px;
         ion-card header{
@@ -44,7 +45,6 @@ ion-content{
       ion-card-content{
         img {
           height: 70px;
-          
         }
       }
       .bgCard{

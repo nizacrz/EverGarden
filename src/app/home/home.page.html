@@ -24,6 +24,7 @@
 </ion-header>
 
 <ion-content>
+
 <ion-grid class="ion-margin-top">
   <ion-item line="none" color ="light">
     <ion-label class="title">Popular</ion-label>
@@ -33,20 +34,46 @@
     <ion-slides [options]="slideOpts">
       <ion-slide *ngFor ="let item of popularItems">
         <ion-card class="bgCard" [routerLink]="['/', 'cart', 'data', item.id]">
-          <ion-card header>
+          <ion-card-header>
             <ion-label>{{item?.name}}
-              <p>PHP: {{item?.price}}</p>
+              <p style="position: absolute; bottom: -115px; left: 0;">PHP: {{item?.price}}</p>
             </ion-label>
-          </ion-card>
+          </ion-card-header>
           <ion-card-content>
             <img [src] ="item?.img" />
           </ion-card-content>
         </ion-card>
       </ion-slide>
-    
     </ion-slides>
   </ion-row>
 </ion-grid>
+
+<ion-grid class="ion-margin-top">
+  <ion-item line="none" color ="light">
+    <ion-label class="title">Featured Plants</ion-label>
+    <ion-button slot="end" size="small" shape="round" color="primary">View All</ion-button>
+  </ion-item>
+  <ion-row>
+    <ion-slides [options]="slideOpts1">
+      <ion-slide *ngFor ="let item of featuredItems">
+        <ion-card class="bgCard" [routerLink]="['/', 'cart', 'data', item.id]">
+          <ion-card header>
+            <img [src] ="item?.img" />
+          </ion-card>
+          <ion-card-content>
+           <ion-item lines="none">
+            <ion-label>
+              {{item?.name}}
+              <p><ion-text color="tertiary"></ion-text></p>
+            </ion-label>
+           </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </ion-row>
+</ion-grid>
+
 
 
 
