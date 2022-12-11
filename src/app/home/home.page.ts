@@ -10,6 +10,18 @@ import { BehaviorSubject } from 'rxjs';
   styleUrls: ['home.page.scss']
 })
 export class HomePage {
+
+    slideOpts = {
+      slidesPerView: 2.2,
+    };
+    slideOpts1 = {
+      slidesPerView: 1.3,
+    };
+    popularItems: any[] = [];
+    featuredItems: any[] = [];
+
+
+
   cart = [];
   products = [];
   cartItemCount: BehaviorSubject<number>;

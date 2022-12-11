@@ -1,15 +1,55 @@
-<ion-header>
+<ion-header class="ion-no-border">
+  <ion-list lines="none">
   <ion-toolbar class="new-background-color">
-    <ion-title class="new-bg-color">
+    <!-- <ion-title class="new-bg-color">
       Products
-    </ion-title>
-        <ion-buttons slot="start">
+    </ion-title> -->
+        <!-- <ion-buttons slot="start">
           <ion-menu-button menu="main-menu"></ion-menu-button>
-        </ion-buttons>
+        </ion-buttons> -->
+  <ion-item color="primary">
+    <ion-menu-button menu="start" name="reorder-three"></ion-menu-button>
+  </ion-item>
+        <ion-item color = "primary">
+          <ion-label>Hi User!</ion-label>
+          <ion-avatar slot = "end">
+            <img src="assets/LOGO1.png">
+          </ion-avatar>
+        </ion-item>
   </ion-toolbar>
+</ion-list>
+  <div class="popover">
+    <ion-searchbar></ion-searchbar>
+  </div>
 </ion-header>
 
 <ion-content>
+<ion-grid class="ion-margin-top">
+  <ion-item line="none" color ="light">
+    <ion-label class="title">Popular</ion-label>
+    <ion-button slot="end" size="small" shape="round" color="primary">View All</ion-button>
+  </ion-item>
+  <ion-row>
+    <ion-slides [options]="slideOpts">
+      <ion-slide *ngFor ="let item of popularItems">
+        <ion-card class="bgCard" [routerLink]="['/', 'cart', 'data', item.id]">
+          <ion-card header>
+            <ion-label>{{item?.name}}</ion-label>
+          </ion-card>
+        </ion-card>"
+      </ion-slide>
+    
+    </ion-slides>
+  </ion-row>
+</ion-grid>
+
+
+
+
+
+
+
+
   <ion-fab vertical="top" horizontal="end" slot="fixed">
     <ion-fab-button (click)="openCart()" #cart>
       <div class="cart-length">{{ cartItemCount | async }}</div>
