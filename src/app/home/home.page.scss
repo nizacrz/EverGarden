@@ -21,12 +21,19 @@ ion-header {
   }
 }
 
+h1 {
+  font-family: Pacifico;
+  font-size: 28px;
+  margin: auto;
+}
+
 .popover {
-  margin: 0 8px;
+  margin: 0 7px;
 
   ion-searchbar {
-    --border-radius: 20px;
+    --border-radius: 30px;
     margin-top: -30px;
+
   }
 }
 
@@ -64,12 +71,15 @@ ion-content {
         background-repeat: no-repeat;
         background-size: contain;
       }
-      .fItem{
+
+      .fItem {
         height: 2opx;
-        ion-card-header{
+
+        ion-card-header {
           padding: 0;
           background: var(--ion-color-tertiary);
-          img{
+
+          img {
             height: 30px;
           }
         }
@@ -94,7 +104,7 @@ ion-fab-button {
 }
 
 .cart-icon {
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .cart-length {
