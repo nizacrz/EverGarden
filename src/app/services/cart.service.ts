@@ -29,6 +29,7 @@ export class CartService {
   private cartItemCount = new BehaviorSubject(0);
 
   constructor() { }
+
   getItem(id){
     const item = this.data.find(x => x.id == id);
     return item;

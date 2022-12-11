@@ -24,7 +24,7 @@
     <ion-row>
       <ion-slides [options]="slideOpts">
         <ion-slide *ngFor="let item of popularItems">
-          <ion-card class="bgCard" [routerLink]="['/', 'cart', 'data',item.id]">
+          <ion-card class="bgCard" [routerLink]="['/', 'item']">
             <ion-card-header>
               <ion-label>{{item?.name}}</ion-label>
             </ion-card-header>
@@ -48,7 +48,7 @@
     <ion-row>
       <ion-slides [options]="slideOpts1">
         <ion-slide *ngFor="let item of featuredItems">
-          <ion-card class="featured" [routerLink]="['/item']">
+          <ion-card class="featured" [routerLink]="['/', 'item']">
             <ion-card-header>
               <img [src]="item?.img" />
             </ion-card-header>
