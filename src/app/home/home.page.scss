@@ -52,6 +52,16 @@ ion-content{
         background-repeat: no-repeat;
         background-size: contain;
       }
+      .fItem{
+        height: 2opx;
+        ion-card-header{
+          padding: 0;
+          background: var(--ion-color-tertiary);
+          img{
+            height: 30px;
+          }
+        }
+      }
     }
   }
 }

@@ -56,16 +56,17 @@
   <ion-row>
     <ion-slides [options]="slideOpts1">
       <ion-slide *ngFor ="let item of featuredItems">
-        <ion-card class="bgCard" [routerLink]="['/', 'cart', 'data', item.id]">
-          <ion-card header>
+        <ion-card class="fItem" [routerLink]="['/', 'cart', 'data', item.id]">
+          <ion-card-header>
             <img [src] ="item?.img" />
-          </ion-card>
+          </ion-card-header>
           <ion-card-content>
            <ion-item lines="none">
             <ion-label>
               {{item?.name}}
-              <p><ion-text color="tertiary"></ion-text></p>
+              <p><ion-text color="tertiary">{{item?.amount}}</ion-text></p>
             </ion-label>
+            <ion-text class ="price" slot="end" color="primary"><b>PHP:{{item?.price}}</b></ion-text>
            </ion-item>
           </ion-card-content>
         </ion-card>
