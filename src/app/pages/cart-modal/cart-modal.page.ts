@@ -10,7 +10,7 @@ import { ModalController, AlertController } from '@ionic/angular';
 export class CartModalPage implements OnInit {
 
   cart: Product[] = [];
-  
+
   constructor(private cartService: CartService, private modalCtrl: ModalController, private alertCtrl: AlertController) { }
 
   ngOnInit() {
@@ -36,7 +36,10 @@ export class CartModalPage implements OnInit {
   close() {
     this.modalCtrl.dismiss();
   }
-  
+  // emptyCart(product){
+  //   this.cartService.clearCart(product);
+  // }
+
   
 
   async checkout() {
@@ -58,7 +61,7 @@ export class CartModalPage implements OnInit {
           text: 'Yes',
           handler: () => {
              this.cart=this.cartService.clearCart();
-            // this.cartItemCount = this.cartService.clearCartItemCart();
+            // this.cartItemCount = this.cartService.clearCart();
           }  }]
     });
     alert.present().then(() => {

@@ -25,7 +25,7 @@ export class CartService {
     { id: 9, name: 'Echeveria', price: 459.00, amount: 0, img:'assets/PRODUCTS/Echeveria Lola.png' }
   ];
 
-  private cart = [];
+  private cart : any = [];
   private cartItemCount = new BehaviorSubject(0);
 
   constructor() { }
@@ -81,13 +81,12 @@ export class CartService {
         this.cart.splice(index, 1);
       }
     }
+    // this.cartItemCount.next(this.cart);
   }
   clearCart(){
   this.cart=[];
+  this.cartItemCount.next(this.cart);
   return this.cart;
   }
-  clearCartItemCart(){
-    this.cart=[];
-    return this.cartItemCount;
-    }
+ 
 }
