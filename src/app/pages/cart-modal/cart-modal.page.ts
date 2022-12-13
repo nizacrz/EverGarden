@@ -10,7 +10,7 @@ import { ModalController, AlertController } from '@ionic/angular';
 export class CartModalPage implements OnInit {
 
   cart: Product[] = [];
-
+  
   constructor(private cartService: CartService, private modalCtrl: ModalController, private alertCtrl: AlertController) { }
 
   ngOnInit() {
@@ -36,17 +36,35 @@ export class CartModalPage implements OnInit {
   close() {
     this.modalCtrl.dismiss();
   }
+  
+  
 
   async checkout() {
     // Perfom PayPal or Stripe checkout process
 
-    let alert = await this.alertCtrl.create({
+    let alert = await this.alertCtrl.create
+    ({
       header: 'Thank you for your order!',
       message: 'You just made our business grow, and for that we are grateful! We will deliver your order as soon as possible.',
-      buttons: ['OK']
+      buttons: [ 
+        {  
+        text: 'Cancel',  
+        role: 'cancel',  
+        handler: () => {  
+          console.log('Confirm Cancel');  
+        }
+      },
+        {
+          text: 'Yes',
+          handler: () => {
+             this.cart=this.cartService.clearCart();
+            // this.cartItemCount = this.cartService.clearCartItemCart();
+          }  }]
     });
     alert.present().then(() => {
+      
       this.modalCtrl.dismiss();
     });
+    
   }
 }

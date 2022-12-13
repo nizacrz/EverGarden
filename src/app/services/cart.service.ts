@@ -82,4 +82,12 @@ export class CartService {
       }
     }
   }
+  clearCart(){
+  this.cart=[];
+  return this.cart;
+  }
+  clearCartItemCart(){
+    this.cart=[];
+    return this.cartItemCount;
+    }
 }
