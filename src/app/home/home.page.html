@@ -19,7 +19,7 @@
   <ion-grid class="ion-margin-top">
     <ion-item line="none" color="light">
       <ion-label class="title">Popular</ion-label>
-      <ion-button slot="end" size="small" shape="round" color="primary">View All</ion-button>
+      <!-- <ion-button slot="end" size="small" shape="round" color="primary">View All</ion-button> -->
     </ion-item>
     <ion-row>
       <ion-slides [options]="slideOpts">
@@ -64,7 +64,7 @@
     </ion-row>
   </ion-grid>
 
-  <ion-fab vertical="top" horizontal="end" slot="fixed">
+  <ion-fab vertical="top" horizontal="end" slot="fixed" >
     <ion-fab-button (click)="openCart()" #cart>
       <div class="cart-length">{{ cartItemCount | async }}</div>
       <ion-icon name="cart" class="cart-icon"></ion-icon>
